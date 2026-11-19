@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { CONTACT_INFO } from '@/data/shipyonData';
 import { InquiryLogItem } from './InquiryLogViewer';
+import { MessageCircle } from 'lucide-react';
 
 interface ContactSectionProps {
   onOpenLogViewer?: () => void;
@@ -142,9 +143,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="ready-to-ship-btn inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm tracking-wide shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 shimmer-sweep"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white hover:bg-emerald-50 text-slate-950 hover:text-emerald-950 font-black text-sm uppercase tracking-wider shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 shimmer-sweep border-2 border-white"
             >
-              CONTACT CORE &amp; CULM
+              <MessageCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+              <span className="text-slate-950 font-black">CONTACT CORE &amp; CULM</span>
             </a>
           </div>
         </div>
