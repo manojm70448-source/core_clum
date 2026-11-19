@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Globe, Users, ShieldCheck, ArrowRight, ChevronDown, Sparkles } from 'lucide-react';
+import { Ship, Sprout, ShieldCheck, ArrowRight, ChevronDown, Anchor, Award, Clock } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (page: string) => void;
@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
     <section className="hero-section relative overflow-hidden">
       {headerSlot}
 
-      {/* Hero Background Banner with subtle parallax zoom */}
+      {/* Hero Background Banner with subtle zoom */}
       <div
         className="hero-image-bg absolute inset-0 transform scale-105 transition-transform duration-1000 ease-out"
         style={{ backgroundImage: 'url("/assets/hero-banner.jpg")' }}
@@ -73,68 +73,68 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
             </button>
           </div>
 
-          {/* Bottom Stats Strip with Glassmorphism */}
+          {/* Operational Metrics Strip */}
           <div className="hero-stats-strip shadow-lg border border-white/10 backdrop-blur-md">
             <div className="hero-stat-item group">
-              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">50+</span>
-              <span className="hero-stat-label">Countries Served</span>
+              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">15k+ MT</span>
+              <span className="hero-stat-label">Annual Volume</span>
             </div>
             <div className="hero-stat-item group">
-              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">1000+</span>
-              <span className="hero-stat-label">Partners Worldwide</span>
+              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">48 Hrs</span>
+              <span className="hero-stat-label">Farm to Freight</span>
             </div>
             <div className="hero-stat-item group">
-              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">99.8%</span>
-              <span className="hero-stat-label">On-time Delivery</span>
+              <span className="hero-stat-value text-emerald-400 group-hover:scale-105 transition-transform">100%</span>
+              <span className="hero-stat-label">Cold-Chain Assured</span>
             </div>
             <div className="hero-stat-item group">
               <span className="hero-stat-value text-amber-300 group-hover:scale-105 transition-transform">24/7</span>
-              <span className="hero-stat-label">Support</span>
+              <span className="hero-stat-label">Dispatch Desk</span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: 3 Floating Glass Cards with Dynamic Hover & Glow */}
+        {/* Right Column: 3 Distinct Core Export Strengths (No duplication!) */}
         <div className="hero-right relative">
           {/* Subtle Ambient Radial Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none animate-glow-slow" />
 
           <div className="hero-stats-dock relative z-10">
-            {/* Card 1 */}
+            {/* Card 1: Maritime Logistics */}
             <div className="hero-stats-card hero-stats-card--left hover:scale-105 transition-all duration-300">
               <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
                 <div className="hero-stats-icon-box bg-emerald-500/20 border border-emerald-400/40 text-emerald-300">
-                  <Globe className="hero-stats-icon" />
+                  <Ship className="hero-stats-icon" />
                 </div>
                 <div className="hero-stats-info">
-                  <span className="hero-stats-number text-white font-black">50+</span>
-                  <span className="hero-stats-label text-slate-200">Countries Served</span>
+                  <span className="hero-stats-number text-white font-black">50+ Global Ports</span>
+                  <span className="hero-stats-label text-slate-200">Tuticorin &amp; Chennai Maritime Sailings</span>
                 </div>
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* Card 2: Direct Origin Sourcing */}
             <div className="hero-stats-card hero-stats-card--right hover:scale-105 transition-all duration-300">
               <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20 transition-all">
                 <div className="hero-stats-icon-box bg-amber-500/20 border border-amber-400/40 text-amber-300">
-                  <Users className="hero-stats-icon" />
+                  <Sprout className="hero-stats-icon" />
                 </div>
                 <div className="hero-stats-info">
-                  <span className="hero-stats-number text-white font-black">1000+</span>
-                  <span className="hero-stats-label text-slate-200">Global Partners</span>
+                  <span className="hero-stats-number text-white font-black">100% Farm Traced</span>
+                  <span className="hero-stats-label text-slate-200">Pattukkottai &amp; South Indian Groves</span>
                 </div>
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* Card 3: Export Certifications */}
             <div className="hero-stats-card hero-stats-card--left hover:scale-105 transition-all duration-300">
               <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
                 <div className="hero-stats-icon-box bg-emerald-500/20 border border-emerald-400/40 text-emerald-300">
                   <ShieldCheck className="hero-stats-icon" />
                 </div>
                 <div className="hero-stats-info">
-                  <span className="hero-stats-number text-white font-black">99.8%</span>
-                  <span className="hero-stats-label text-slate-200">On-Time Delivery</span>
+                  <span className="hero-stats-number text-white font-black">APEDA &bull; FSSAI</span>
+                  <span className="hero-stats-label text-slate-200">Spices Board &bull; Phytosanitary Inspected</span>
                 </div>
               </div>
             </div>
