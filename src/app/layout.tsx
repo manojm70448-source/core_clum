@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://coreandculm.com'),
   title: "CORE & CULM™ – Nature's Strength. Global Reach.",
   description:
-    'CORE & CULM connects trusted South Indian producers to global markets. Export-grade semi-husked coconuts, shallots, world-class spices, fresh drumsticks, and coir products. Proprietor & Exporter: Prabhakaran. GST: 33EBBPG3505C1ZH. Pattukkottai, Tamil Nadu.',
+    'CORE & CULM connects trusted South Indian producers to global markets. Export-grade semi-husked coconuts, shallots, world-class spices, fresh drumsticks, and coir products. Proprietor & Exporter: Prabhakaran. Pattukkottai, Tamil Nadu.',
   keywords: [
     'CORE & CULM',
     'Core and Culm',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'shallots export Tamil Nadu',
     'spices export South India',
     'farm to freight',
-    'GST 33EBBPG3505C1ZH',
+    'certified agricultural exporter India',
   ],
   authors: [{ name: 'Prabhakaran (Core & Culm)' }],
   openGraph: {

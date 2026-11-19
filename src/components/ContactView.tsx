@@ -14,7 +14,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
   onNewLogAdded,
 }) => {
   return (
-    <div className="pt-24 pb-12 bg-[#F8F5F0]">
+    <div className="pt-24 pb-16 bg-gradient-to-b from-slate-50 via-emerald-50/20 to-slate-50">
       {/* Contact Page Hero */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-4">

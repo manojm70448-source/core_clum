@@ -166,7 +166,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             <div className="mb-6">
               <div className="flex items-center gap-2 text-brand-600 text-xs font-bold uppercase tracking-wider mb-1">
                 <Ship className="w-4 h-4" />
-                <span>CORE &amp; CULM™ Export Desk &bull; GST: {CONTACT_INFO.gst}</span>
+                <span>CORE &amp; CULM™ Export Desk &bull; Certified Global Exporter</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                 Request Official Export Quotation

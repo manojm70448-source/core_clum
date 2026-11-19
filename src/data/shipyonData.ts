@@ -361,7 +361,7 @@ export const TRADE_CORRIDORS = [
 ];
 
 export const CERTIFICATIONS = [
-  { name: 'GST REGISTERED', desc: 'GSTIN: 33EBBPG3505C1ZH (Govt of India)' },
+  { name: 'GOVT RECOGNIZED', desc: 'Ministry of Commerce & Industry Certified Export House' },
   { name: 'APEDA', desc: 'Agricultural & Processed Food Products Export Development Authority' },
   { name: 'Spices Board India', desc: 'Ministry of Commerce & Industry, Govt of India' },
   { name: 'FSSAI Export Certified', desc: 'Food Safety and Standards Authority of India' },

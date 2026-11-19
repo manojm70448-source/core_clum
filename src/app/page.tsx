@@ -25,7 +25,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F5F0] flex flex-col relative text-slate-900">
+    <div className="min-h-screen bg-slate-50 flex flex-col relative text-slate-900">
       {/* Header Pill Navigation */}
       <Header
         currentPage={currentPage}

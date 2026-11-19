@@ -17,7 +17,7 @@ export const LeadershipSection: React.FC = () => {
       role: 'Export Regulatory & Logistics',
       image: CONTACT_INFO.images.logoIcon,
       description:
-        `Ensures all operations meet statutory standards (GSTIN: ${CONTACT_INFO.gst}, APEDA, FSSAI, Spices Board), managing maritime freight and cold-chain integrity from South Indian container ports.`,
+        'Ensures all operations meet statutory international standards (APEDA, FSSAI, Spices Board, DGFT), managing maritime freight and cold-chain integrity from South Indian container ports.',
     },
   ];
 
