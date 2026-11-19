@@ -116,23 +116,37 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       {/* Ready to Ship & Enquiry Form Container */}
       <div className="ready-to-ship-container">
         {/* Left Side: Brand & Call to Action Visual Card */}
-        <div className="ready-to-ship-content">
-          <h2 className="ready-to-ship-title">
-            Ready to Source or Ship Products?
-          </h2>
-          <p className="ready-to-ship-subtitle">
-            Submit your inquiry or order — we&apos;ll take care of the rest.
-          </p>
-          <a
-            href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(
-              'Hello Prabhakaran (CORE & CULM), I would like to source export products.'
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ready-to-ship-btn inline-block text-center"
-          >
-            CONTACT CORE &amp; CULM
-          </a>
+        <div
+          className="ready-to-ship-content relative overflow-hidden"
+          style={{ backgroundImage: 'url("/images/ready-to-ship-bg.jpg")' }}
+        >
+          {/* Subtle gradient vignette overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/60 to-emerald-950/40 z-0" />
+
+          <div className="relative z-10 flex flex-col items-center justify-center text-center p-6 sm:p-10">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/25 border border-emerald-400/40 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
+              🚢 Maritime &amp; Air Logistics
+            </span>
+
+            <h2 className="ready-to-ship-title text-3xl sm:text-4xl font-black text-white tracking-tight mb-4 drop-shadow-md">
+              Ready to Source or Ship Products?
+            </h2>
+
+            <p className="ready-to-ship-subtitle text-slate-200 text-sm sm:text-base max-w-md mx-auto mb-8 font-normal leading-relaxed drop-shadow-sm">
+              Submit your inquiry or order — we&apos;ll coordinate farm grading, container stuffing &amp; maritime shipping.
+            </p>
+
+            <a
+              href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(
+                'Hello Prabhakaran (CORE & CULM), I would like to source export products.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ready-to-ship-btn inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm tracking-wide shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 shimmer-sweep"
+            >
+              CONTACT CORE &amp; CULM
+            </a>
+          </div>
         </div>
 
         {/* Right Side: Exact Get in Touch Form */}
