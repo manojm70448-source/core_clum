@@ -293,12 +293,12 @@ export default function AdminPage() {
             </div>
           )}
 
-          <form onSubmit={handleLogin} className="space-y-5">
-            <div>
+          <form onSubmit={handleLogin} className="w-full space-y-5" style={{ width: '100%' }}>
+            <div className="w-full" style={{ width: '100%' }}>
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
                 Administrator Password
               </label>
-              <div className="relative">
+              <div className="relative w-full" style={{ width: '100%' }}>
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
@@ -307,11 +307,12 @@ export default function AdminPage() {
                   required
                   autoFocus
                   className="w-full px-4 py-3 bg-slate-950/70 border border-slate-700 rounded-xl text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all pr-12"
+                  style={{ width: '100%' }}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors p-1"
                   aria-label="Toggle password visibility"
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -322,28 +323,28 @@ export default function AdminPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm shadow-lg shadow-emerald-950/50 hover:shadow-emerald-900/50 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full h-12 py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm shadow-lg shadow-emerald-950/50 hover:shadow-emerald-900/50 transition-all duration-200 flex flex-row items-center justify-center gap-2.5 disabled:opacity-50 whitespace-nowrap cursor-pointer"
+              style={{ width: '100%', minWidth: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
             >
               {isSubmitting ? (
                 <>
-                  <RefreshCw className="w-4 h-4 animate-spin" />
+                  <RefreshCw className="w-4 h-4 animate-spin flex-shrink-0" />
                   <span>Verifying Credentials...</span>
                 </>
               ) : (
                 <>
-                  <Lock className="w-4 h-4" />
-                  <span>Access Admin Dashboard</span>
+                  <Lock className="w-4 h-4 flex-shrink-0" />
+                  <span className="font-semibold tracking-wide">Access Admin Dashboard</span>
                 </>
               )}
             </button>
           </form>
 
           <div className="mt-8 pt-6 border-t border-slate-800 text-center">
-            <p className="text-xs text-slate-500">
-              Default password: <code className="text-emerald-400 font-mono">admin123</code>
-              <br />
-              <span className="text-[11px] text-slate-600">Configurable in <code className="text-slate-400">.env.local</code> as <code className="text-slate-400">ADMIN_PASSWORD</code></span>
-            </p>
+            <div className="flex items-center justify-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold text-slate-500">
+              <Shield className="w-3.5 h-3.5 text-emerald-500/80 flex-shrink-0" />
+              <span>Restricted System &bull; Authorized Personnel Only</span>
+            </div>
             <div className="mt-4">
               <a
                 href="/"
@@ -438,7 +439,7 @@ export default function AdminPage() {
               <span className="text-xl">⚠️</span>
               <div>
                 <strong className="block text-amber-100 font-bold">Security Notice: Default Admin Password Active</strong>
-                <span>The dashboard is currently using the default password (<code className="bg-amber-900/60 px-1.5 py-0.5 rounded text-amber-200 font-mono">admin123</code>). For production safety, set <code className="bg-amber-900/60 px-1.5 py-0.5 rounded text-amber-200 font-mono">ADMIN_PASSWORD</code> in your hosting provider&apos;s environment variables.</span>
+                <span>The dashboard is currently protected using the initial default password. For production security, configure <code className="bg-amber-900/60 px-1.5 py-0.5 rounded text-amber-200 font-mono">ADMIN_PASSWORD</code> in your environment variables.</span>
               </div>
             </div>
           </div>
