@@ -32,15 +32,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
         
         {/* Left Column (7 cols on Desktop) */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-          {/* Eyebrow Badge with Pulsing Live Beacon */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md w-fit">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-            </span>
-            <span>Pattukkottai Export Desk &bull; Global Maritime Trade</span>
-          </div>
-
           {/* Main Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl font-black text-white tracking-tight leading-tight sm:leading-[1.15] mb-5">
             South India&apos;s Premier Trade &amp; Sourcing Company
