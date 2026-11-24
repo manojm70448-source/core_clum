@@ -88,9 +88,9 @@ export const ExportExperience: React.FC = () => {
                 ref={(el) => {
                   cardsRef.current[idx] = el;
                 }}
-                className="opacity-0 transition-opacity duration-700 exp-card-wrapper"
+                className="h-full exp-card-wrapper"
               >
-                <Card3D maxTilt={12} perspective={900} className="h-full">
+                <Card3D maxTilt={10} perspective={900} className="h-full">
                   <div className="rounded-3xl p-6 sm:p-8 bg-white/90 backdrop-blur-xl border border-emerald-500/20 shadow-xl shadow-slate-900/5 hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-900/10 transition-all duration-300 flex flex-col justify-between h-full group">
                     <div>
                       {/* 3D Sphere Icon */}

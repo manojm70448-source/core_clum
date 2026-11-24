@@ -14,103 +14,98 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
   const [activeTab, setActiveTab] = useState<'globe' | 'metrics'>('globe');
 
   return (
-    <section className="hero-section relative overflow-hidden">
+    <section className="relative overflow-hidden bg-slate-950 min-h-[92vh] flex items-center pt-28 sm:pt-32 pb-16">
       {headerSlot}
 
       {/* Hero Background Banner with subtle zoom */}
       <div
-        className="hero-image-bg absolute inset-0 transform scale-105 transition-transform duration-1000 ease-out"
+        className="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-1000 ease-out"
         style={{ backgroundImage: 'url("/assets/hero-banner.jpg")' }}
       />
 
-      {/* Modern Gradient Overlays */}
-      <div className="hero-overlay" />
-      <div className="hero-pattern" aria-hidden="true" />
+      {/* Modern Gradient Overlays for maximum legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-emerald-950/70 z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.15)_0%,_transparent_60%)] z-0" />
 
-      {/* Floating Ambient Light Blobs for depth */}
-      <div className="absolute top-20 left-10 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none animate-glow-slow" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none animate-float-reverse" />
-
-      {/* Main Split Grid */}
-      <div className="hero-split-container">
-        {/* Left Column */}
-        <div className="hero-left">
+      {/* Main Split Grid (Balanced 7/5 Grid) */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        {/* Left Column (7 cols on Desktop) */}
+        <div className="lg:col-span-7 flex flex-col justify-center">
           {/* Eyebrow Badge with Pulsing Live Beacon */}
-          <div className="hero-eyebrow flex items-center gap-2">
-            <span className="relative flex h-2.5 w-2.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md w-fit">
+            <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
             </span>
-            <span className="font-semibold tracking-wide text-xs sm:text-sm">
-              Pattukkottai Export Desk &bull; Global Maritime Trade
-            </span>
+            <span>Pattukkottai Export Desk &bull; Global Maritime Trade</span>
           </div>
 
           {/* Main Title */}
-          <h1 className="hero-main-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight sm:leading-none">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl font-black text-white tracking-tight leading-tight sm:leading-[1.15] mb-5">
             South India&apos;s Premier Trade &amp; Sourcing Company
-            <span className="hero-highlight-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent mt-2 block">
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent block mt-1">
               Export Solutions
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="hero-main-subtitle text-sm sm:text-base md:text-lg text-slate-200/95 font-normal leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-slate-200/90 font-normal leading-relaxed mb-7 max-w-2xl">
             Seamless sourcing, cold-chain assurance &amp; container trade — from Pattukkottai and South India to global destination ports.
           </p>
 
-          {/* Call to Actions with Shimmer & Micro-Interactions */}
-          <div className="hero-cta-group flex flex-wrap gap-3 mb-6">
+          {/* Call to Actions with Shimmer */}
+          <div className="flex flex-wrap gap-3.5 mb-8">
             <button
               id="hero-explore-btn"
               onClick={() => onNavigate('products')}
-              className="hero-btn hero-btn-primary shimmer-sweep group shadow-xl shadow-emerald-950/40 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-950/50 shimmer-sweep hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
             >
-              <span className="font-bold">Explore Products</span>
-              <ArrowRight className="hero-btn-icon group-hover:translate-x-1.5 transition-transform duration-300" />
+              <span>Explore Products</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
               id="hero-contact-btn"
               onClick={() => onNavigate('contact')}
-              className="hero-btn hero-btn-secondary hover:border-emerald-400/60 transition-all duration-300 w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 backdrop-blur-md hover:border-emerald-400/60 transition-all duration-300 w-full sm:w-auto"
             >
               <span>Contact Us</span>
             </button>
           </div>
 
-          {/* Operational Metrics Strip (Responsive for all mobile screens) */}
-          <div className="hero-stats-strip shadow-lg border border-white/10 backdrop-blur-md rounded-2xl w-full">
-            <div className="grid grid-cols-2 sm:grid-cols-4 w-full divide-x divide-y sm:divide-y-0 divide-white/10">
-              <div className="p-3 sm:p-4 text-center group">
-                <span className="block text-lg sm:text-xl md:text-2xl font-black text-emerald-400 group-hover:scale-105 transition-transform">
+          {/* Operational Metrics Strip */}
+          <div className="rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-xl overflow-hidden w-full max-w-2xl">
+            <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-white/10">
+              <div className="p-3.5 sm:p-4 text-center">
+                <span className="block text-xl sm:text-2xl font-black text-emerald-400">
                   15k+ MT
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-medium">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block">
                   Annual Volume
                 </span>
               </div>
-              <div className="p-3 sm:p-4 text-center group">
-                <span className="block text-lg sm:text-xl md:text-2xl font-black text-emerald-400 group-hover:scale-105 transition-transform">
+              <div className="p-3.5 sm:p-4 text-center">
+                <span className="block text-xl sm:text-2xl font-black text-emerald-400">
                   48 Hrs
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-medium">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block">
                   Farm to Freight
                 </span>
               </div>
-              <div className="p-3 sm:p-4 text-center group">
-                <span className="block text-lg sm:text-xl md:text-2xl font-black text-emerald-400 group-hover:scale-105 transition-transform">
+              <div className="p-3.5 sm:p-4 text-center">
+                <span className="block text-xl sm:text-2xl font-black text-emerald-400">
                   100%
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-medium">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block">
                   Cold-Chain Assured
                 </span>
               </div>
-              <div className="p-3 sm:p-4 text-center group">
-                <span className="block text-lg sm:text-xl md:text-2xl font-black text-amber-300 group-hover:scale-105 transition-transform">
+              <div className="p-3.5 sm:p-4 text-center">
+                <span className="block text-xl sm:text-2xl font-black text-amber-300">
                   24/7
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-medium">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block">
                   Export Support
                 </span>
               </div>
@@ -118,16 +113,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
           </div>
         </div>
 
-        {/* Right Column: 3D Interactive Globe & Floating Glass 3D Cards */}
-        <div className="hero-right-modern flex flex-col items-center justify-center w-full relative z-10 mt-8 lg:mt-0">
-          {/* Subtle Ambient Radial Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none animate-glow-slow" />
-
-          {/* Mode Switcher Tabs for 3D Globe & Stats Cards */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-900/80 border border-emerald-500/30 rounded-2xl mb-4 backdrop-blur-xl shadow-lg">
+        {/* Right Column (5 cols on Desktop): 3D Interactive Globe & Key Benchmarks */}
+        <div className="lg:col-span-5 flex flex-col items-center justify-center w-full relative z-10 mt-4 lg:mt-0">
+          {/* View Switcher Tabs */}
+          <div className="flex items-center gap-1.5 p-1.5 bg-slate-900/90 border border-emerald-500/40 rounded-full mb-4 backdrop-blur-xl shadow-xl">
             <button
               onClick={() => setActiveTab('globe')}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
                 activeTab === 'globe'
                   ? 'bg-emerald-600 text-white shadow-md'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
@@ -138,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
             </button>
             <button
               onClick={() => setActiveTab('metrics')}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
                 activeTab === 'metrics'
                   ? 'bg-emerald-600 text-white shadow-md'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
@@ -151,20 +143,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
 
           {/* Active View Container */}
           {activeTab === 'globe' ? (
-            <div className="w-full max-w-md animate-fadeIn">
+            <div className="w-full max-w-lg animate-fadeIn">
               <InteractiveGlobe3D height={380} />
             </div>
           ) : (
-            <div className="hero-stats-dock relative z-10 w-full max-w-md space-y-3.5 animate-fadeIn">
+            <div className="relative z-10 w-full max-w-lg space-y-4 animate-fadeIn">
               {/* 3D Card 1 */}
-              <Card3D maxTilt={14} perspective={900}>
-                <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center flex-shrink-0">
+              <Card3D maxTilt={12} perspective={900}>
+                <div className="border border-white/20 bg-slate-900/80 backdrop-blur-xl rounded-2xl p-4.5 flex items-center gap-4 hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
+                  <div className="w-13 h-13 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center flex-shrink-0 p-3">
                     <Globe className="w-6 h-6" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-black text-white">50+</span>
-                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold">
+                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold mt-0.5">
                       Countries Served Worldwide
                     </span>
                   </div>
@@ -172,14 +164,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
               </Card3D>
 
               {/* 3D Card 2 */}
-              <Card3D maxTilt={14} perspective={900}>
-                <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20 transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-400/40 text-amber-300 flex items-center justify-center flex-shrink-0">
+              <Card3D maxTilt={12} perspective={900}>
+                <div className="border border-white/20 bg-slate-900/80 backdrop-blur-xl rounded-2xl p-4.5 flex items-center gap-4 hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20 transition-all">
+                  <div className="w-13 h-13 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-300 flex items-center justify-center flex-shrink-0 p-3">
                     <Users className="w-6 h-6" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-black text-white">1000+</span>
-                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold">
+                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold mt-0.5">
                       Global Buyers &amp; Partners
                     </span>
                   </div>
@@ -187,14 +179,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
               </Card3D>
 
               {/* 3D Card 3 */}
-              <Card3D maxTilt={14} perspective={900}>
-                <div className="hero-stats-card-inner border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center flex-shrink-0">
+              <Card3D maxTilt={12} perspective={900}>
+                <div className="border border-white/20 bg-slate-900/80 backdrop-blur-xl rounded-2xl p-4.5 flex items-center gap-4 hover:border-emerald-400/50 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all">
+                  <div className="w-13 h-13 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center flex-shrink-0 p-3">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-black text-white">99.8%</span>
-                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold">
+                    <span className="text-xs uppercase tracking-wider text-slate-200 font-semibold mt-0.5">
                       On-Time Container Dispatches
                     </span>
                   </div>
@@ -203,15 +195,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
             </div>
           )}
         </div>
-      </div>
-
-      {/* Bottom Scroll Indicator with Gentle Pulse */}
-      <div
-        className="hero-scroll-indicator cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
-        onClick={() => window.scrollTo({ top: 750, behavior: 'smooth' })}
-      >
-        <span className="hero-scroll-text text-[10px] tracking-widest uppercase">Scroll to explore</span>
-        <ChevronDown className="hero-scroll-arrow animate-bounce w-4 h-4" />
       </div>
     </section>
   );
