@@ -328,7 +328,7 @@ export const WHY_CHOOSE_US = [
 
 export const COMPANY_STATS = [
   { value: '50+', label: 'Global Destinations', detail: 'Serving importers in GCC, Europe, SEA & North America' },
-  { value: '10,000+', label: 'Metric Tons Shipped', detail: 'Bulk agricultural produce & commodities moved annually' },
+  { value: '15,000+ MT', label: 'Annual Sourcing Capacity', detail: 'Bulk agricultural produce & commodities moved annually' },
   { value: '500+', label: 'Partner Farmers', detail: 'Contracted growers across Pattukkottai, Pollachi & Guntur' },
   { value: '99.8%', label: 'On-Time Vessel Dispatch', detail: 'Precision logistics with zero port detention record' },
 ];

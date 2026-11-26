@@ -72,8 +72,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, headerSlot }) => {
                 <span className="block text-xl sm:text-2xl font-black text-emerald-400">
                   15k+ MT
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block">
-                  Annual Volume
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-semibold mt-0.5 block leading-tight">
+                  Annual Sourcing Capacity
                 </span>
               </div>
               <div className="p-3.5 sm:p-4 text-center">
